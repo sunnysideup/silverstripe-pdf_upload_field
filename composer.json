@@ -2,21 +2,26 @@
     "name": "sunnysideup/pdf_upload_field",
     "type": "silverstripe-module",
     "description": "Adds an Upload Field specifically for PDFs to your Silverstripe CMS",
-    "keywords": ["pdf", "upload field", "upload", "file", "CMS", "Silverstripe"],
+    "keywords": [
+        "pdf",
+        "upload field",
+        "upload",
+        "file",
+        "CMS",
+        "Silverstripe"
+    ],
     "license": "Sunny Side Up (BSD-3-Clause and CUSTOM)",
-    "authors":[
+    "authors": [
         {
             "name": "Nicolaas Francken",
-            "homepage": "https://github.com/sunnysideup",
-            "email" : "modules@sunnysideup.co.nz",
-            "role" : "lead developer"
+            "email": "modules@sunnysideup.co.nz",
+            "role": "lead developer"
         }
     ],
-    "require":{
+    "require": {
         "silverstripe/framework": "^3.4"
     },
     "extra": {
         "installer-name": "pdf_upload_field"
     }
-
 }
