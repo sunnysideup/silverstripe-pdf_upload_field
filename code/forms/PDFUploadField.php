@@ -13,7 +13,6 @@
  */
 class PDFUploadField extends UploadField
 {
-
     private static $pdf_folder_name = "pdfs";
     /**
      * @param string  $name
