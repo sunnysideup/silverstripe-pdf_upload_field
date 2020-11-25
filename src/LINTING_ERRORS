@@ -1,0 +1,63 @@
+
+
+---------------------------------
+  Running Easy Conding Standards
+---------------------------------
+  directory of script: /home/ssu/.config/composer/vendor/bin
+  directory to analyse: /var/www/upgrades/pdf_upload_field/pdf_upload_field/src
+  also check (e.g. _config.php file): /var/www/upgrades/pdf_upload_field/app/_config.php
+  ecs config file: /home/ssu/.config/composer/vendor/bin/../sunnysideup/easy-coding-standards/ecs.yml
+---------------------------------
+
+
+EasyCodingStandard v6.1.0
+Config file: /home/ssu/.config/composer/vendor/sunnysideup/easy-coding-standards/ecs.yml
+ 0/1 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%
+ 1/1 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+
+ [OK] No errors found. Great job - your code is shiny in style!                                                         
+
+EasyCodingStandard v6.1.0
+Config file: /home/ssu/.config/composer/vendor/sunnysideup/easy-coding-standards/ecs.yml
+ 0/1 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%
+ 1/1 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+
+ [OK] No errors found. Great job - your code is shiny in style!                                                         
+
+
+
+---------------------------------
+  Running PHP STAN
+---------------------------------
+  directory of script: /home/ssu/.config/composer/vendor/bin
+  directory to analyse: /var/www/upgrades/pdf_upload_field/pdf_upload_field/src
+  also check (e.g. _config.php file): /var/www/upgrades/pdf_upload_field/app/_config.php
+  level: 4 (1/6)
+  php stan config file: /home/ssu/.config/composer/vendor/bin/../sunnysideup/easy-coding-standards/phpstan.neon
+---------------------------------
+
+
+ 0/1 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[2K 1/1 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+
+ [OK] No errors                                                                                                         
+
+ 0/1 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[2K 1/1 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+
+ ------ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  Line   Forms/PDFUploadField.php                                                                                                                                                          
+ ------ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  37     Return typehint of method Sunnysideup\PdfUpload\Forms\PDFUploadField::__construct() has invalid type Sunnysideup\PdfUpload\Forms\ReportUploadField.                               
+  68     Method Sunnysideup\PdfUpload\Forms\PDFUploadField::__construct() with return type void returns $this(Sunnysideup\PdfUpload\Forms\PDFUploadField) but should not return anything.  
+ ------ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------------------------------------------------------------------------------------------------- 
+  Error                                                                                            
+ ------------------------------------------------------------------------------------------------- 
+  Ignored error pattern #Access to an undefined property# was not matched in reported errors.      
+  Ignored error pattern #Call to an undefined method# was not matched in reported errors.          
+  Ignored error pattern #on an unknown class [a-zA-Z0-9\\_]+# was not matched in reported errors.  
+  Ignored error pattern #with incorrect case:# was not matched in reported errors.                 
+ ------------------------------------------------------------------------------------------------- 
+
+ [ERROR] Found 6 errors                                                                                                 
+
