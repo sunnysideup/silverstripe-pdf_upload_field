@@ -50,3 +50,4 @@ class PDFUploadField extends UploadField
         return $this;
     }
 }
+
