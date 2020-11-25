@@ -1,5 +1,7 @@
 <?php
 
+use SilverStripe\Dev\SapphireTest;
+
 class PdfUploadFieldTest extends SapphireTest
 {
     protected $usesDatabase = false;

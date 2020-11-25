@@ -2,11 +2,18 @@
 
 namespace Sunnysideup\PdfUpload\Forms;
 
-use UploadField;
-use SS_List;
-use Config;
-use Folder;
-use Director;
+
+
+
+
+
+use SilverStripe\ORM\SS_List;
+use SilverStripe\Core\Config\Config;
+use Sunnysideup\PdfUpload\Forms\PDFUploadField;
+use SilverStripe\Control\Director;
+use SilverStripe\Assets\Folder;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+
 
 
 /**
@@ -48,7 +55,7 @@ class PDFUploadField extends UploadField
         $this->setRightTitle('Only PDF files are accepted.');
         //create folder
         if (!$folderName) {
-            $folderName = Config::inst()->get('PDFUploadField', 'pdf_folder_name');
+            $folderName = Config::inst()->get(PDFUploadField::class, 'pdf_folder_name');
         }
 
 /**

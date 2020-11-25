@@ -1,0 +1,59 @@
+2020-11-25 10:19
+
+# running php upgrade upgrade see: https://github.com/silverstripe/silverstripe-upgrader
+cd /var/www/upgrades/pdf_upload_field
+php /var/www/ss3/upgrader/vendor/silverstripe/upgrader/bin/upgrade-code upgrade /var/www/upgrades/pdf_upload_field/pdf_upload_field  --root-dir=/var/www/upgrades/pdf_upload_field --write -vvv
+Writing changes for 2 files
+Running upgrades on "/var/www/upgrades/pdf_upload_field/pdf_upload_field"
+[2020-11-25 22:19:57] Applying RenameClasses to PdfUploadFieldTest.php...
+[2020-11-25 22:19:57] Applying ClassToTraitRule to PdfUploadFieldTest.php...
+[2020-11-25 22:19:57] Applying RenameClasses to PDFUploadField.php...
+[2020-11-25 22:19:57] Applying ClassToTraitRule to PDFUploadField.php...
+[2020-11-25 22:19:57] Applying RenameClasses to _config.php...
+[2020-11-25 22:19:57] Applying ClassToTraitRule to _config.php...
+modified:	tests/PdfUploadFieldTest.php
+@@ -1,4 +1,6 @@
+ <?php
++
++use SilverStripe\Dev\SapphireTest;
+
+ class PdfUploadFieldTest extends SapphireTest
+ {
+
+modified:	src/Forms/PDFUploadField.php
+@@ -2,11 +2,18 @@
+
+ namespace Sunnysideup\PdfUpload\Forms;
+
+-use UploadField;
+-use SS_List;
+-use Config;
+-use Folder;
+-use Director;
++
++
++
++
++
++use SilverStripe\ORM\SS_List;
++use SilverStripe\Core\Config\Config;
++use Sunnysideup\PdfUpload\Forms\PDFUploadField;
++use SilverStripe\Control\Director;
++use SilverStripe\Assets\Folder;
++use SilverStripe\AssetAdmin\Forms\UploadField;
++
+
+
+ /**
+@@ -48,7 +55,7 @@
+         $this->setRightTitle('Only PDF files are accepted.');
+         //create folder
+         if (!$folderName) {
+-            $folderName = Config::inst()->get('PDFUploadField', 'pdf_folder_name');
++            $folderName = Config::inst()->get(PDFUploadField::class, 'pdf_folder_name');
+         }
+
+ /**
+
+Writing changes for 2 files
+✔✔✔
