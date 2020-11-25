@@ -41,6 +41,15 @@ class PDFUploadField extends UploadField
         if (!$folderName) {
             $folderName = Config::inst()->get('PDFUploadField', 'pdf_folder_name');
         }
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: automated upgrade
+  * OLD: assets/ (case sensitive)
+  * NEW: assets/ (COMPLEX)
+  * EXP: Check if you need the assets parts - use ASSETS_PATH if needed
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
         Folder::find_or_make(Director::baseFolder()."/assets/".$folderName);
         //set folder
         $this->setFolderName($folderName);
