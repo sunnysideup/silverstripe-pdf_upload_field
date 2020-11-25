@@ -1,5 +1,14 @@
 <?php
 
+namespace Sunnysideup\PdfUpload\Forms;
+
+use UploadField;
+use SS_List;
+use Config;
+use Folder;
+use Director;
+
+
 /**
  * allow a pdf to be uploaded...
  *
