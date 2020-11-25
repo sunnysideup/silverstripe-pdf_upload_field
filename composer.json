@@ -1,6 +1,6 @@
 {
     "name": "sunnysideup/pdf_upload_field",
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "description": "Adds an Upload Field specifically for PDFs to your Silverstripe CMS",
     "keywords": [
         "Silverstripe-CMS",
