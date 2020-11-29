@@ -1,6 +1,6 @@
 {
     "name": "sunnysideup/pdf_upload_field",
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "description": "Adds an Upload Field specifically for PDFs to your Silverstripe CMS",
     "keywords": [
         "Silverstripe-CMS",
@@ -20,10 +20,12 @@
         }
     ],
     "require": {
-        "silverstripe/framework": "~3.6",
-        "silverstripe/cms": "~3.6"
+        "silverstripe/recipe-cms": "^4.4"
     },
-    "extra": {
-        "installer-name": "pdf_upload_field"
+    "extra": [],
+    "autoload": {
+        "psr-4": {
+            "Sunnysideup\\PdfUpload\\": "src/"
+        }
     }
 }

@@ -1,0 +1,188 @@
+2020-11-25 10:21
+
+# running php upgrade inspect see: https://github.com/silverstripe/silverstripe-upgrader
+cd /var/www/upgrades/pdf_upload_field
+php /var/www/ss3/upgrader/vendor/silverstripe/upgrader/bin/upgrade-code inspect /var/www/upgrades/pdf_upload_field/pdf_upload_field/src  --root-dir=/var/www/upgrades/pdf_upload_field --write -vvv
+Array
+(
+    [0] => 
+    [1] => In DependencyChecker.php line 145:
+    [2] => 
+    [3] =>   [ReflectionException]
+    [4] =>   Method PhpParser\Lexer::__construct()() does not exist
+    [5] => 
+    [6] => 
+    [7] => Exception trace:
+    [8] =>   at /var/www/ss3/upgrader/vendor/nette/di/src/DI/DependencyChecker.php:145
+    [9] =>  ReflectionMethod->__construct() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/DependencyChecker.php:145
+    [10] =>  Nette\DI\DependencyChecker::calculateHash() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/DependencyChecker.php:73
+    [11] =>  Nette\DI\DependencyChecker->export() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/Compiler.php:173
+    [12] =>  Nette\DI\Compiler->exportDependencies() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/ContainerLoader.php:120
+    [13] =>  Nette\DI\ContainerLoader->generate() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/ContainerLoader.php:79
+    [14] =>  Nette\DI\ContainerLoader->loadFile() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/ContainerLoader.php:44
+    [15] =>  Nette\DI\ContainerLoader->load() at /var/www/ss3/upgrader/vendor/nette/bootstrap/src/Bootstrap/Configurator.php:270
+    [16] =>  Nette\Bootstrap\Configurator->loadContainer() at /var/www/ss3/upgrader/vendor/nette/bootstrap/src/Bootstrap/Configurator.php:248
+    [17] =>  Nette\Bootstrap\Configurator->createContainer() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/DependencyInjection/ContainerFactory.php:58
+    [18] =>  PHPStan\DependencyInjection\ContainerFactory->create() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/src/Util/PHPStanState.php:66
+    [19] =>  SilverStripe\Upgrader\Util\PHPStanState->initContainer() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/src/Util/PHPStanState.php:43
+    [20] =>  SilverStripe\Upgrader\Util\PHPStanState->init() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/src/Console/InspectCommand.php:60
+    [21] =>  SilverStripe\Upgrader\Console\InspectCommand->execute() at /var/www/ss3/upgrader/vendor/symfony/console/Command/Command.php:255
+    [22] =>  Symfony\Component\Console\Command\Command->run() at /var/www/ss3/upgrader/vendor/symfony/console/Application.php:1009
+    [23] =>  Symfony\Component\Console\Application->doRunCommand() at /var/www/ss3/upgrader/vendor/symfony/console/Application.php:273
+    [24] =>  Symfony\Component\Console\Application->doRun() at /var/www/ss3/upgrader/vendor/symfony/console/Application.php:149
+    [25] =>  Symfony\Component\Console\Application->run() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/bin/upgrade-code:55
+    [26] => 
+    [27] => inspect [-d|--root-dir ROOT-DIR] [-w|--write] [--skip-visibility] [--] <path>
+    [28] => 
+)
+
+
+------------------------------------------------------------------------
+To continue, please use the following parameter: startFrom=InspectAPIChanges-1
+e.g. php runme.php startFrom=InspectAPIChanges-1
+------------------------------------------------------------------------
+            
+# running php upgrade inspect see: https://github.com/silverstripe/silverstripe-upgrader
+cd /var/www/upgrades/pdf_upload_field
+php /var/www/ss3/upgrader/vendor/silverstripe/upgrader/bin/upgrade-code inspect /var/www/upgrades/pdf_upload_field/pdf_upload_field/src  --root-dir=/var/www/upgrades/pdf_upload_field --write -vvv
+Array
+(
+    [0] => PhpParser\Lexer::__construct()
+    [1] => In DependencyChecker.php line 146:
+    [2] => 
+    [3] =>   [ReflectionException]
+    [4] =>   Method PhpParser\Lexer::__construct()() does not exist
+    [5] => 
+    [6] => 
+    [7] => Exception trace:
+    [8] =>   at /var/www/ss3/upgrader/vendor/nette/di/src/DI/DependencyChecker.php:146
+    [9] =>  ReflectionMethod->__construct() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/DependencyChecker.php:146
+    [10] =>  Nette\DI\DependencyChecker::calculateHash() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/DependencyChecker.php:73
+    [11] =>  Nette\DI\DependencyChecker->export() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/Compiler.php:173
+    [12] =>  Nette\DI\Compiler->exportDependencies() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/ContainerLoader.php:120
+    [13] =>  Nette\DI\ContainerLoader->generate() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/ContainerLoader.php:79
+    [14] =>  Nette\DI\ContainerLoader->loadFile() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/ContainerLoader.php:44
+    [15] =>  Nette\DI\ContainerLoader->load() at /var/www/ss3/upgrader/vendor/nette/bootstrap/src/Bootstrap/Configurator.php:270
+    [16] =>  Nette\Bootstrap\Configurator->loadContainer() at /var/www/ss3/upgrader/vendor/nette/bootstrap/src/Bootstrap/Configurator.php:248
+    [17] =>  Nette\Bootstrap\Configurator->createContainer() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/DependencyInjection/ContainerFactory.php:58
+    [18] =>  PHPStan\DependencyInjection\ContainerFactory->create() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/src/Util/PHPStanState.php:66
+    [19] =>  SilverStripe\Upgrader\Util\PHPStanState->initContainer() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/src/Util/PHPStanState.php:43
+    [20] =>  SilverStripe\Upgrader\Util\PHPStanState->init() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/src/Console/InspectCommand.php:60
+    [21] =>  SilverStripe\Upgrader\Console\InspectCommand->execute() at /var/www/ss3/upgrader/vendor/symfony/console/Command/Command.php:255
+    [22] =>  Symfony\Component\Console\Command\Command->run() at /var/www/ss3/upgrader/vendor/symfony/console/Application.php:1009
+    [23] =>  Symfony\Component\Console\Application->doRunCommand() at /var/www/ss3/upgrader/vendor/symfony/console/Application.php:273
+    [24] =>  Symfony\Component\Console\Application->doRun() at /var/www/ss3/upgrader/vendor/symfony/console/Application.php:149
+    [25] =>  Symfony\Component\Console\Application->run() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/bin/upgrade-code:55
+    [26] => 
+    [27] => inspect [-d|--root-dir ROOT-DIR] [-w|--write] [--skip-visibility] [--] <path>
+    [28] => 
+)
+
+
+------------------------------------------------------------------------
+To continue, please use the following parameter: startFrom=InspectAPIChanges-1
+e.g. php runme.php startFrom=InspectAPIChanges-1
+------------------------------------------------------------------------
+            
+# running php upgrade inspect see: https://github.com/silverstripe/silverstripe-upgrader
+cd /var/www/upgrades/pdf_upload_field
+php /var/www/ss3/upgrader/vendor/silverstripe/upgrader/bin/upgrade-code inspect /var/www/upgrades/pdf_upload_field/pdf_upload_field/src  --root-dir=/var/www/upgrades/pdf_upload_field --write -vvv
+Array
+(
+    [0] => PhpParser\Lexer::__construct()
+    [1] => In DependencyChecker.php line 146:
+    [2] => 
+    [3] =>   [ReflectionException]
+    [4] =>   Method PhpParser\Lexer::__construct()() does not exist
+    [5] => 
+    [6] => 
+    [7] => Exception trace:
+    [8] =>   at /var/www/ss3/upgrader/vendor/nette/di/src/DI/DependencyChecker.php:146
+    [9] =>  ReflectionMethod->__construct() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/DependencyChecker.php:146
+    [10] =>  Nette\DI\DependencyChecker::calculateHash() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/DependencyChecker.php:73
+    [11] =>  Nette\DI\DependencyChecker->export() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/Compiler.php:173
+    [12] =>  Nette\DI\Compiler->exportDependencies() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/ContainerLoader.php:120
+    [13] =>  Nette\DI\ContainerLoader->generate() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/ContainerLoader.php:79
+    [14] =>  Nette\DI\ContainerLoader->loadFile() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/ContainerLoader.php:44
+    [15] =>  Nette\DI\ContainerLoader->load() at /var/www/ss3/upgrader/vendor/nette/bootstrap/src/Bootstrap/Configurator.php:270
+    [16] =>  Nette\Bootstrap\Configurator->loadContainer() at /var/www/ss3/upgrader/vendor/nette/bootstrap/src/Bootstrap/Configurator.php:248
+    [17] =>  Nette\Bootstrap\Configurator->createContainer() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/DependencyInjection/ContainerFactory.php:58
+    [18] =>  PHPStan\DependencyInjection\ContainerFactory->create() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/src/Util/PHPStanState.php:66
+    [19] =>  SilverStripe\Upgrader\Util\PHPStanState->initContainer() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/src/Util/PHPStanState.php:43
+    [20] =>  SilverStripe\Upgrader\Util\PHPStanState->init() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/src/Console/InspectCommand.php:60
+    [21] =>  SilverStripe\Upgrader\Console\InspectCommand->execute() at /var/www/ss3/upgrader/vendor/symfony/console/Command/Command.php:255
+    [22] =>  Symfony\Component\Console\Command\Command->run() at /var/www/ss3/upgrader/vendor/symfony/console/Application.php:1009
+    [23] =>  Symfony\Component\Console\Application->doRunCommand() at /var/www/ss3/upgrader/vendor/symfony/console/Application.php:273
+    [24] =>  Symfony\Component\Console\Application->doRun() at /var/www/ss3/upgrader/vendor/symfony/console/Application.php:149
+    [25] =>  Symfony\Component\Console\Application->run() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/bin/upgrade-code:55
+    [26] => 
+    [27] => inspect [-d|--root-dir ROOT-DIR] [-w|--write] [--skip-visibility] [--] <path>
+    [28] => 
+)
+
+
+------------------------------------------------------------------------
+To continue, please use the following parameter: startFrom=InspectAPIChanges-1
+e.g. php runme.php startFrom=InspectAPIChanges-1
+------------------------------------------------------------------------
+            
+# running php upgrade inspect see: https://github.com/silverstripe/silverstripe-upgrader
+cd /var/www/upgrades/pdf_upload_field
+php /var/www/ss3/upgrader/vendor/silverstripe/upgrader/bin/upgrade-code inspect /var/www/upgrades/pdf_upload_field/pdf_upload_field/src  --root-dir=/var/www/upgrades/pdf_upload_field --write -vvv
+Array
+(
+    [0] => -------------------PhpParser\Lexer::__construct()-------------------
+    [1] => In DependencyChecker.php line 148:
+    [2] => 
+    [3] =>   [ReflectionException]
+    [4] =>   Method PhpParser\Lexer::__construct()() does not exist
+    [5] => 
+    [6] => 
+    [7] => Exception trace:
+    [8] =>   at /var/www/ss3/upgrader/vendor/nette/di/src/DI/DependencyChecker.php:148
+    [9] =>  ReflectionMethod->__construct() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/DependencyChecker.php:148
+    [10] =>  Nette\DI\DependencyChecker::calculateHash() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/DependencyChecker.php:73
+    [11] =>  Nette\DI\DependencyChecker->export() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/Compiler.php:173
+    [12] =>  Nette\DI\Compiler->exportDependencies() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/ContainerLoader.php:120
+    [13] =>  Nette\DI\ContainerLoader->generate() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/ContainerLoader.php:79
+    [14] =>  Nette\DI\ContainerLoader->loadFile() at /var/www/ss3/upgrader/vendor/nette/di/src/DI/ContainerLoader.php:44
+    [15] =>  Nette\DI\ContainerLoader->load() at /var/www/ss3/upgrader/vendor/nette/bootstrap/src/Bootstrap/Configurator.php:270
+    [16] =>  Nette\Bootstrap\Configurator->loadContainer() at /var/www/ss3/upgrader/vendor/nette/bootstrap/src/Bootstrap/Configurator.php:248
+    [17] =>  Nette\Bootstrap\Configurator->createContainer() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/DependencyInjection/ContainerFactory.php:58
+    [18] =>  PHPStan\DependencyInjection\ContainerFactory->create() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/src/Util/PHPStanState.php:66
+    [19] =>  SilverStripe\Upgrader\Util\PHPStanState->initContainer() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/src/Util/PHPStanState.php:43
+    [20] =>  SilverStripe\Upgrader\Util\PHPStanState->init() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/src/Console/InspectCommand.php:60
+    [21] =>  SilverStripe\Upgrader\Console\InspectCommand->execute() at /var/www/ss3/upgrader/vendor/symfony/console/Command/Command.php:255
+    [22] =>  Symfony\Component\Console\Command\Command->run() at /var/www/ss3/upgrader/vendor/symfony/console/Application.php:1009
+    [23] =>  Symfony\Component\Console\Application->doRunCommand() at /var/www/ss3/upgrader/vendor/symfony/console/Application.php:273
+    [24] =>  Symfony\Component\Console\Application->doRun() at /var/www/ss3/upgrader/vendor/symfony/console/Application.php:149
+    [25] =>  Symfony\Component\Console\Application->run() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/bin/upgrade-code:55
+    [26] => 
+    [27] => inspect [-d|--root-dir ROOT-DIR] [-w|--write] [--skip-visibility] [--] <path>
+    [28] => 
+)
+
+
+------------------------------------------------------------------------
+To continue, please use the following parameter: startFrom=InspectAPIChanges-1
+e.g. php runme.php startFrom=InspectAPIChanges-1
+------------------------------------------------------------------------
+            
+# running php upgrade inspect see: https://github.com/silverstripe/silverstripe-upgrader
+cd /var/www/upgrades/pdf_upload_field
+php /var/www/ss3/upgrader/vendor/silverstripe/upgrader/bin/upgrade-code inspect /var/www/upgrades/pdf_upload_field/pdf_upload_field/src  --root-dir=/var/www/upgrades/pdf_upload_field --write -vvv
+Writing changes for 0 files
+-------------------PhpParser\Lexer::__construct()--------------------------------------PhpParser\NodeTraverser::__construct()--------------------------------------PhpParser\NodeTraverser::addVisitor()--------------------------------------PhpParser\NodeVisitor\NameResolver::__construct()--------------------------------------PhpParser\ParserAbstract::__construct()--------------------------------------PhpParser\PrettyPrinterAbstract::__construct()--------------------------------------PHPStan\PhpDocParser\Parser\PhpDocParser::__construct()--------------------------------------PHPStan\PhpDoc\PhpDocNodeResolver::__construct()--------------------------------------PHPStan\PhpDoc\PhpDocStringResolver::__construct()--------------------------------------PHPStan\PhpDoc\TypeStringResolver::__construct()--------------------------------------PHPStan\Analyser\Analyser::__construct()--------------------------------------PHPStan\Analyser\NodeScopeResolver::__construct()--------------------------------------PHPStan\Analyser\TypeSpecifier::__construct()--------------------------------------PHPStan\Cache\Cache::__construct()--------------------------------------PHPStan\Command\AnalyseApplication::__construct()--------------------------------------PHPStan\File\FileHelper::__construct()--------------------------------------PHPStan\File\FileExcluder::__construct()--------------------------------------PHPStan\Parser\CachedParser::__construct()--------------------------------------PHPStan\Reflection\FunctionReflection::__construct()--------------------------------------PHPStan\Reflection\Annotations\AnnotationsMethodsClassReflectionExtension::__construct()--------------------------------------PHPStan\Reflection\Annotations\AnnotationsPropertiesClassReflectionExtension::__construct()--------------------------------------PHPStan\Reflection\Php\PhpClassReflectionExtension::__construct()--------------------------------------PHPStan\Reflection\PhpDefect\PhpDefectClassReflectionExtension::__construct()--------------------------------------PHPStan\Reflection\Php\PhpMethodReflection::__construct()--------------------------------------PHPStan\Reflection\Php\UniversalObjectCratesClassReflectionExtension::__construct()--------------------------------------PHPStan\Rules\ClassCaseSensitivityCheck::__construct()--------------------------------------PHPStan\Rules\FunctionCallParametersCheck::__construct()--------------------------------------PHPStan\Rules\FunctionDefinitionCheck::__construct()--------------------------------------PHPStan\Rules\FunctionReturnTypeCheck::__construct()--------------------------------------PHPStan\Rules\RegistryFactory::__construct()--------------------------------------PHPStan\Rules\RuleLevelHelper::__construct()--------------------------------------PHPStan\Type\FileTypeMapper::__construct()--------------------------------------PHPStan\Broker\BrokerFactory::create()--------------------------------------PHPStan\Broker\BrokerFactory::__construct()--------------------------------------PHPStan\Cache\FileCacheStorage::__construct()--------------------------------------PHPStan\Parser\DirectParser::__construct()--------------------------------------PHPStan\Rules\RegistryFactory::create()--------------------------------------PHPStan\Rules\Arrays\DuplicateKeysInLiteralArraysRule::__construct()--------------------------------------PHPStan\Rules\Classes\ClassConstantRule::__construct()--------------------------------------PHPStan\Rules\Classes\ExistingClassInInstanceOfRule::__construct()--------------------------------------PHPStan\Rules\Classes\ExistingClassesInClassImplementsRule::__construct()--------------------------------------PHPStan\Rules\Classes\ExistingClassesInInterfaceExtendsRule::__construct()--------------------------------------PHPStan\Rules\Classes\ExistingClassInClassExtendsRule::__construct()--------------------------------------PHPStan\Rules\Classes\ExistingClassInTraitUseRule::__construct()--------------------------------------PHPStan\Rules\Classes\InstantiationRule::__construct()--------------------------------------PHPStan\Rules\Classes\UnusedConstructorParametersRule::__construct()--------------------------------------PHPStan\Rules\Exceptions\CaughtExceptionExistenceRule::__construct()--------------------------------------PHPStan\Rules\Functions\CallToFunctionParametersRule::__construct()--------------------------------------PHPStan\Rules\Functions\CallToNonExistentFunctionRule::__construct()--------------------------------------PHPStan\Rules\Functions\ExistingClassesInClosureTypehintsRule::__construct()--------------------------------------PHPStan\Rules\Functions\ExistingClassesInTypehintsRule::__construct()--------------------------------------PHPStan\Rules\Functions\NonExistentDefinedFunctionRule::__construct()--------------------------------------PHPStan\Rules\Functions\UnusedClosureUsesRule::__construct()--------------------------------------PHPStan\Rules\Methods\CallMethodsRule::__construct()--------------------------------------PHPStan\Rules\Methods\CallStaticMethodsRule::__construct()--------------------------------------PHPStan\Rules\Methods\ExistingClassesInTypehintsRule::__construct()--------------------------------------PHPStan\Rules\Namespaces\ExistingNamesInGroupUseRule::__construct()--------------------------------------PHPStan\Rules\Namespaces\ExistingNamesInUseRule::__construct()--------------------------------------PHPStan\Rules\Properties\AccessPropertiesRule::__construct()--------------------------------------PHPStan\Rules\Properties\AccessStaticPropertiesRule::__construct()--------------------------------------PHPStan\Rules\Properties\ExistingClassesInPropertiesRule::__construct()--------------------------------------PHPStan\Rules\Properties\WritingToReadOnlyPropertiesRule::__construct()--------------------------------------PHPStan\Rules\Properties\ReadingWriteOnlyPropertiesRule::__construct()--------------------------------------PHPStan\Rules\Variables\DefinedVariableRule::__construct()--------------------------------------PHPStan\Rules\Variables\DefinedVariableInAnonymousFunctionUseRule::__construct()--------------------------------------PHPStan\Rules\Constants\ConstantRule::__construct()--------------------------------------PHPStan\Rules\PhpDoc\InvalidPhpDocTagValueRule::__construct()--------------------------------------PHPStan\Rules\PhpDoc\IncompatiblePhpDocTypeRule::__construct()--------------------------------------PHPStan\Rules\Arrays\AppendedArrayItemTypeRule::__construct()--------------------------------------PHPStan\Rules\Arrays\IterableInForeachRule::__construct()--------------------------------------PHPStan\Rules\Functions\ClosureReturnTypeRule::__construct()--------------------------------------PHPStan\Rules\Functions\ReturnTypeRule::__construct()--------------------------------------PHPStan\Rules\Methods\ReturnTypeRule::__construct()--------------------------------------PHPStan\Rules\Properties\DefaultValueTypesAssignedToPropertiesRule::__construct()--------------------------------------PHPStan\Rules\Properties\TypesAssignedToPropertiesRule::__construct()--------------------------------------PHPStan\Rules\Variables\VariableCloningRule::__construct()--------------------------------------PHPStan\Rules\Classes\ImpossibleInstanceOfRule::__construct()--------------------------------------PHPStan\Rules\Comparison\ImpossibleCheckTypeFunctionCallRule::__construct()--------------------------------------PHPStan\Rules\Functions\CallToCountOnlyWithArrayOrCountableRule::__construct()--------------------------------------PHPStan\Rules\Properties\AccessPropertiesOnPossiblyNullRule::__construct()--------------------------------------PHPStan\Rules\Methods\CallMethodsOnPossiblyNullRule::__construct()-------------------Running post-upgrade on "/var/www/upgrades/pdf_upload_field/pdf_upload_field/src"
+[2020-11-25 22:24:22] Applying ApiChangeWarningsRule to PDFUploadField.php...
+[2020-11-25 22:24:23] Applying UpdateVisibilityRule to PDFUploadField.php...
+Writing changes for 0 files
+✔✔✔
+# running php upgrade inspect see: https://github.com/silverstripe/silverstripe-upgrader
+cd /var/www/upgrades/pdf_upload_field
+php /var/www/ss3/upgrader/vendor/silverstripe/upgrader/bin/upgrade-code inspect /var/www/upgrades/pdf_upload_field/pdf_upload_field/src  --root-dir=/var/www/upgrades/pdf_upload_field --write -vvv
+Writing changes for 0 files
+Running post-upgrade on "/var/www/upgrades/pdf_upload_field/pdf_upload_field/src"
+[2020-11-25 22:35:56] Applying ApiChangeWarningsRule to PDFUploadField.php...
+[2020-11-25 22:35:56] Applying UpdateVisibilityRule to PDFUploadField.php...
+Writing changes for 0 files
+✔✔✔
