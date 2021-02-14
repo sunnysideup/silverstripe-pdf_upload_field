@@ -4,7 +4,6 @@ namespace Sunnysideup\PdfUpload\Forms;
 
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Folder;
-use SilverStripe\Control\Director;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\ORM\SS_List;
 
