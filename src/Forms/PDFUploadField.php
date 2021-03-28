@@ -46,7 +46,7 @@ class PDFUploadField extends UploadField
         );
         $this->setDescription('Only PDF files are accepted.');
         //create folder
-        if (! $folderName) {
+        if ($folderName === '') {
             $folderName = Config::inst()->get(PDFUploadField::class, 'pdf_folder_name');
         }
 
