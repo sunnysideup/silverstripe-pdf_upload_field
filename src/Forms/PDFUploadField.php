@@ -27,7 +27,7 @@ class PDFUploadField extends UploadField
      * @param string  $title
      * @param SS_List $items If no items are defined, the field will try to auto-detect an existing relation on
      *
-     *                       @link $record}, with the same name as the field name.
+     *                       @see $record}, with the same name as the field name.
      *
      * @param string $folderName
      *
@@ -46,7 +46,7 @@ class PDFUploadField extends UploadField
         );
         $this->setDescription('Only PDF files are accepted.');
         //create folder
-        if ($folderName === '') {
+        if ('' === $folderName) {
             $folderName = Config::inst()->get(PDFUploadField::class, 'pdf_folder_name');
         }
 
