@@ -31,7 +31,6 @@ class PDFUploadField extends UploadField
      *
      * @param string $folderName
      *
-     * @return ReportUploadField
      */
     public function __construct(
         $name,
@@ -55,7 +54,5 @@ class PDFUploadField extends UploadField
         $this->setFolderName($folderName);
         $this->setAllowedExtensions(['pdf']);
         $this->setAllowedMaxFileNumber(1);
-
-        return $this;
     }
 }
