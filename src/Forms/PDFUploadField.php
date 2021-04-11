@@ -30,7 +30,6 @@ class PDFUploadField extends UploadField
      *                       @see $record}, with the same name as the field name.
      *
      * @param string $folderName
-     *
      */
     public function __construct(
         $name,
